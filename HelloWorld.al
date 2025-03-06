@@ -10,10 +10,12 @@ pageextension 50200 CustomerListExt extends "Customer List"
 {
     var
         MyEmilioCodeUnit: Codeunit testccodeunit;
-
+        MyMatCodeUnite: Codeunit Mymat;  
     trigger OnOpenPage();
     begin
+        MyMatCodeUnite. 
         Message('App published: Hello world');
         MyEmilioCodeUnit.MyProcedureglobal();
+
     end;
 }
