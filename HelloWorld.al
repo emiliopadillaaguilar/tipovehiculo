@@ -10,11 +10,20 @@ pageextension 50200 CustomerListExt extends "Customer List"
 {
     var
         MyEmilioCodeUnit: Codeunit testccodeunit;
-        MyMatCodeUnite: Codeunit Mymat;  
+        MyMatCodeUnite: Codeunit Mymat;
+
     trigger OnOpenPage();
+    var
+        totalsuma: Integer;
+        numeroa: Integer;
+        numerob: Integer;
+
     begin
-        MyMatCodeUnite. 
-        Message('App published: Hello world');
+        numeroa := 11;
+        numerob := 20;
+
+        totalsuma := MyMatCodeUnite.Suma(numeroa, numerob);
+        Message('App published: Hello world ' + Format(totalsuma));
         MyEmilioCodeUnit.MyProcedureglobal();
 
     end;

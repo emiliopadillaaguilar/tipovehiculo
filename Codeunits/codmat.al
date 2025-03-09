@@ -1,18 +1,18 @@
-codeunit 50145 Mymat
+codeunit 50245 Mymat
 {
-    trigger OnRun()
+    procedure suma(var numeroa: Integer; numerob: Integer): Integer
+    var
+        totalsuma: Integer;
     begin
-       myresult:=Suma(1,5);  
+        totalsuma := Sumalocal(numeroa, numerob);
+        exit(totalsuma);
     end;
-    
-    var
-        myresult: Integer;
 
-    local procedure Suma (var numeroa: Integer, numerob: Integer): Integer
+    local procedure Sumalocal(var numeroa: Integer; numerob: Integer): Integer
     var
-        totalsuma : Integer; 
+        totalsuma: Integer;
     begin
-        suma = numeroa + numerob; 
-        exit (suma); 
-    end;       
+        totalsuma := numeroa + numerob;
+        exit(totalsuma);
+    end;
 }
